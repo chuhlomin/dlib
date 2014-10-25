@@ -30,6 +30,17 @@
     </div>
     <!-- /headline -->
 
+<div class="login">
+   !{{user}}!
+{% if user.is_anonymous %}
+   <a href="{% url "django.contrib.auth.views.login" %}?next={{request.path}}">Login</a>
+
+{% else %}
+    <p>Contratulations on logging in, we love visitors, but we currently have nothing to show you!</p>
+{% endif %}
+</div>
+
+
     <h3 class="section-title">{% block title %}{% endblock %}</h3>
 
     {% block content %}{% endblock %}
