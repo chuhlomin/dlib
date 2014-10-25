@@ -17,6 +17,10 @@ Run: sudo pip install django==1.5.8
 
 Run: python manage.py syncdb
 
+### Populate DB
+
+Run: python manage.py loaddata books.yaml
+
 ### Run server
 
 Run: python manage.py runserver
