@@ -70,9 +70,8 @@ STATIC_ROOT = ''
 STATIC_URL = '/static/'
 
 # Additional locations of static files
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'static/'),
 )
 
 # List of finder classes that know how to find static files in
