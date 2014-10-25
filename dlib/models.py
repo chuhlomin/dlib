@@ -1,5 +1,9 @@
+from datetime import datetime, timedelta
+
 from django.db import models
 from django.contrib.auth.models import User
+
+
 
 class Book (models.Model):
     title    = models.CharField(max_length=100)
@@ -13,6 +17,28 @@ class Book (models.Model):
     desc = models.TextField()
     owner = models.ForeignKey(User)
     
+        
+    def borrowed_by(self):
+        borrows = Borrow.objects.filter(book = self)
+        if not borrows.count():
+            return None
+        else:
+            return borrows[0].borrower
+        
+    def borrowed_on(self):
+        borrows = Borrow.objects.filter(book = self)
+        if not borrows.count():
+            return None
+        else:
+            return borrows[0].rented_date
+        
+    def to_be_returned_on(self):
+        borrows = Borrow.objects.filter(book = self)
+        if not borrows.count():
+            return None
+        else:
+            return borrows[0].rented_date + timedelta(days = borrows[0].term)
+            
     
     def __unicode__(self):
         return self.title

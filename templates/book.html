@@ -9,9 +9,11 @@
         </div>
         <div class="col-xs-9">
             <p>{{book.desc}}</p>
-            <a href="#fakelink" class="btn btn-default">Take it</a>
-            <a href="#fakelink" class="btn btn-default">Read it</a>
-            <a href="#fakelink" class="btn btn-default">Add to wishlist</a>
+            <a href="#fakelink" class="btn btn-default {%if book.borrowed_by%}disabled{%endif%}">Take it</a>
+            {%if book.borrowed_by%}
+            <div>Too bad for you! This book was borrowed by {{book.borrowed_by}} from {{book.owner}} on {{book.borrowed_on}}. 
+            Estimated date of return is {{book.to_be_returned_on}}</div>
+            {%endif%}
         </div>
     </div>
     <!-- /row -->
