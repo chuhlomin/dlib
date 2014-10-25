@@ -9,6 +9,7 @@
             <img src="/static/images/{{book.pic}}" width="260" height="350">
         </div>
         <div class="col-xs-9">
+            <p>{{book.genre}}</p>
             <p>{{book.desc}}</p>
             <p><a href="/takeit/{{book.id}}" class="btn {% if book.borrowed_by %}disabled{% else %}btn-primary{% endif %}">Take it</a></p>
             {%if book.borrowed_by%}
