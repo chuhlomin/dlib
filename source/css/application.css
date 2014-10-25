@@ -52,10 +52,15 @@
     margin-top: 1em;
     margin-bottom: 1em;
     height: 3em;
-    background: #f9f9f9;
+    background: #ECF0F1;
     color: #666;
 }
     .btn-landing-more {
         height: 3em;
-        background: #f9f9f9;
+        background: #ECF0F1;
     }
+
+.alert-borrower {
+    background: #ECF0F1;
+    color: #7F8C8D;
+}
