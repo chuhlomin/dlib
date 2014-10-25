@@ -14,7 +14,7 @@ class Book (models.Model):
     genre    = models.CharField(max_length=50, blank=True, null=True)
     edition  = models.IntegerField(blank=True, null=True)
     pic      = models.CharField(max_length=50, blank=True, null=True)
-    desc = models.TextField()
+    desc = models.TextField(verbose_name="description")
     owner = models.ForeignKey(User)
     
         
@@ -38,8 +38,7 @@ class Book (models.Model):
             return None
         else:
             return borrows[0].rented_date + timedelta(days = borrows[0].term)
-            
-    
+
     def __unicode__(self):
         return self.title
     

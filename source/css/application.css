@@ -31,3 +31,10 @@
         padding-left: 15px;
         padding-right: 15px;
     }
+
+.form-add_book {
+    padding: 1em;
+    background: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
