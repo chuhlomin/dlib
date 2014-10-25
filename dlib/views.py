@@ -6,6 +6,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.core.context_processors import csrf
 from dlib.models import Book, Borrow
 from django.contrib.auth.models import User
+from dlib.forms import BookFormAdd
 
 
 def user(request, user_id):
@@ -63,9 +64,27 @@ def booklist(request):
     }
     return render_to_response('booklist.html', arguments)
 
-def add_book(request):
+def book_add(request):
+
     arguments = {
         'user': request.user,
         'isRoot': False
     }
+
+    if request.method == 'POST':
+
+        form = BookFormAdd(request.POST)
+
+        if form.is_valid():
+            book = form.save(commit=False)
+            book.owner = request.user
+            book.save()
+            return HttpResponseRedirect('/book/' + str(book.id))
+
+    else:
+        form = BookFormAdd()
+
+    arguments["form"] = form
+    arguments.update(csrf(request))
+
     return render_to_response('add_book.html', arguments)

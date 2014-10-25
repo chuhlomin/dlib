@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     url(r'^user$', 'dlib.views.user', name='user'),
     url(r'^book/(\d+)$', 'dlib.views.book', name='book'),
     url(r'^booklist$', 'dlib.views.booklist', name='booklist'),
-    url(r'^add_book$', 'dlib.views.add_book', name='add_book'),
+    url(r'^book/add$', 'dlib.views.book_add', name='book_add'),
     url(r'^takeit/(\d+)$', 'dlib.views.borrow_book', name='borrow_book'),
     url(r'^user/(\d+)$', 'dlib.views.user', name='user_profile'),
     

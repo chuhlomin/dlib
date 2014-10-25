@@ -30,7 +30,7 @@
 
         <div class="panel-user">
             {% if user.is_anonymous %}
-            <a class="btn btn-primary" href="{% url "django.contrib.auth.views.login" %}?next={{next}}">
+            <a class="btn btn-primary" href="{% url 'django.contrib.auth.views.login' %}?next={{next}}">
                 <span class="fui-exit"></span>Login
             </a>
             or 
@@ -39,8 +39,8 @@
             </a>
             {% else %}
             <span class="">Hello, {{user}}.</span>
-            <a class="btn btn-primary" href="/add_book"><span class="fui-plus"></span>Add book</a>
-            <a class="btn btn-default" href="{% url "django.contrib.auth.views.logout" %}?next={{next}}">Logout</a>
+            <a class="btn btn-primary" href="{% url 'book_add' %}"><span class="fui-plus"></span>Add book</a>
+            <a class="btn btn-default" href="{% url 'django.contrib.auth.views.logout' %}?next={{next}}">Logout</a>
             {% endif %}
         </div>
     </div>

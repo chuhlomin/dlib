@@ -5,72 +5,35 @@
 {% block content %}
 <div class="row">
     <div class="col-xs-6">
-        <form class="form-horizontal" role="form">
+        <form class="form-horizontal form-add_book" role="form" action="/add_book" method="post">
+            {% csrf_token %}
+
+            {{ form.non_field_errors }}
+
+            {% for field in form %}
+
             <div class="form-group">
-                <label for="book-title" class="col-sm-2 control-label">Title</label>
+
+                {{ field.errors }}
+                <label for="{{ field.id_for_label }}" class="col-sm-2 control-label">{{ field.label }}</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" value="" id="book-title">
+                    {% if field.name == "description" %}
+                        <textarea name="{{ field.name }}" class="form-control" rows="6" id="{{ field.id_for_label }}">{% if field.value %}{{ field.value }}{% endif %}</textarea>
+                    {% else %}
+                        <input name="{{ field.name }}" type="text" class="form-control" value="{% if field.value %}{{ field.value }}{% endif %}" id="{{ field.id_for_label }}">
+                    {% endif %}
                 </div>
             </div>
 
-            <div class="form-group">
-                <label for="book-title" class="col-sm-2 control-label">Author</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" value="" id="book-author">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="book-title" class="col-sm-2 control-label">Year</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" value="" id="book-year">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="book-title" class="col-sm-2 control-label">Language</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" value="" id="book-language">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="book-title" class="col-sm-2 control-label">ISBN</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" value="" id="book-isbn">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="book-title" class="col-sm-2 control-label">Genre</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" value="" id="book-genre">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="book-title" class="col-sm-2 control-label">Edition</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" value="" id="edition">
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="book-title" class="col-sm-2 control-label">Description</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" value="" id="description">
-                </div>
-            </div>
+            {% endfor %}
 
             <div class="form-group">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-10">
-                    <a class="btn btn-primary btn-lg btn-block" href="#">Save</a>
+                    <button class="btn btn-primary btn-lg btn-block" type="submit">Save</button>
                     <a class="login-link" href="#">Cancel</a>
                 </div>
             </div>
-
-
 
         </form>
     </div>
