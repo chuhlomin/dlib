@@ -39,6 +39,16 @@
     </div>
     <!-- /headline -->
 
+<div class="pull-right ">
+    {% if user.is_anonymous %}
+        <a href="{% url "django.contrib.auth.views.login" %}?next={{request.path}}">Login</a>
+    {% else %}
+        Hello, {{user}}.
+        <a href="{% url "django.contrib.auth.views.logout" %}?next=/">Logout</a>?
+    {% endif %}
+</div>
+
+
     <h3 class="section-title">{% block title %}{% endblock %}</h3>
 
     {% block content %}{% endblock %}

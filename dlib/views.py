@@ -15,6 +15,7 @@ def landing(request):
         'images': images,
         'user': request.user,
         'form': AuthenticationForm(),
+        'next': request.path,
         'isRoot': True
     }
     d.update(csrf(request))
@@ -29,6 +30,7 @@ def book(request):
     arguments = {
         'user': request.user,
         'books': Book.objects.all(),
+        'next': request.path,
         'isRoot': False
     }
     return render_to_response('book.html', arguments)
