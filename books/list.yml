@@ -4,6 +4,7 @@ books:
     author: "Douglas Adams"
     year: 1995
     language: "en"
+    pic: "hgttg.jpg"
 
   - title: "Cryptonomicon"
     author: "Neal Stephenson"
@@ -11,6 +12,7 @@ books:
     isbn: "0-380-78862-4"
     genre: "scifi"
     language: "en"
+    pic: "cryptonomicon.jpg"
 
   - title: "Думай медленно... Решай быстро"
     author: "Дэниел Канеман"
@@ -18,6 +20,7 @@ books:
     isbn: "978-5-17-080053-7"
     genre: "psychology"
     language: "ru"
+    pic: "thinking.jpg"
 
   - title: "The Pragmatic Programmer: From Journeyman to Master"
     author: "Andrew Hunt, David Thomas"
@@ -26,6 +29,7 @@ books:
     genre: "programming"
     language: "en"
     edition: 1
+    pic: "pragprog.jpg"
 
   - title: "Programming Erlang"
     author: "Joe Armstrong"
@@ -34,3 +38,4 @@ books:
     genre: "programming"
     language: "en"
     edition: 2
+    pic: "erlang.jpg"
