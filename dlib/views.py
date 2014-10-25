@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render_to_response
-
+from dlib.models import Book
 
 def landing(request):
     images = [
@@ -22,4 +22,5 @@ def book(request):
 
 
 def booklist(request):
-    return render_to_response('booklist.html')
+    books = Book.objects.all()
+    return render_to_response('booklist.html', {'books': books})

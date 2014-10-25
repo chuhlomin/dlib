@@ -1,0 +1,3 @@
+.book-row + .book-row {
+    margin-top: 1em;
+}

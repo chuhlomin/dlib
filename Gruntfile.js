@@ -9,9 +9,12 @@ module.exports = function(grunt) {
                         dest: 'static/css/flat-ui.min.css'
                     },
                     {
-                        expand: false,
                         src: 'bower_components/flat-ui/dist/css/vendor/bootstrap.min.css',
                         dest: 'static/css/vendor/bootstrap.min.css'
+                    },
+                    {
+                        src: 'source/css/application.css',
+                        dest: 'static/css/application.css'
                     }
                 ]
             }
