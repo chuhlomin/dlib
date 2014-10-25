@@ -9,9 +9,9 @@ Download https://bootstrap.pypa.io/get-pip.py
 
 Run: sudo python get-pip.py
 
-### Install django
+### Install python libs
 
-Run: sudo pip install django==1.5.8
+Run: sudo pip install django==1.5.8 pyyaml
 
 ### Update DB
 
