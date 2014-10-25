@@ -1,20 +1,31 @@
 dlib
 ====
 
-INSTALLATION
+## INSTALLATION
 
-1. Install pip
+### Install pip
+
 Download https://bootstrap.pypa.io/get-pip.py
+
 Run: sudo python get-pip.py
 
-2. Install django
+### Install django
+
 Run: sudo pip install django==1.5.8
 
-3. Update DB
+### Update DB
+
 Run: python manage.py syncdb
 
-4. Run server
+### Run server
+
 Run: python manage.py runserver
 
-5. Open site
+### Install dependencies
+
+Run: npm install
+  
+
+### Open site
+
 URL: http://127.0.0.1:8000/
