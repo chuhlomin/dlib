@@ -25,8 +25,18 @@
 
 .headline .logo a {
     color: #7f8c8d;
-    text-decoration: underline;
+    position: relative;
 }
+
+.headline .logo a:after {
+    content: " ";
+    display: block;
+    border-bottom: 5px solid #7f8c8d;
+    width: 100%;
+    position: absolute;
+    bottom: 2px;
+}
+
 
 .panel-user {
     position: absolute;
@@ -52,10 +62,15 @@
     margin-top: 1em;
     margin-bottom: 1em;
     height: 3em;
-    background: #f9f9f9;
+    background: #ECF0F1;
     color: #666;
 }
     .btn-landing-more {
         height: 3em;
-        background: #f9f9f9;
+        background: #ECF0F1;
     }
+
+.alert-borrower {
+    background: #ECF0F1;
+    color: #7F8C8D;
+}
