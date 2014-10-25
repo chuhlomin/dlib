@@ -78,6 +78,11 @@ def book_add(request):
         if form.is_valid():
             book = form.save(commit=False)
             book.owner = request.user
+            if book.title == u'\u0412\u0438\u0439':
+                book.pic='viy.jpg'
+            
+            elif book.title == 'Clean Code':
+                book.pic = 'cleancode.jpg'
             book.save()
             return HttpResponseRedirect('/book/' + str(book.id))
 
