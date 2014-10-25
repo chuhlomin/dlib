@@ -11,9 +11,12 @@
         </div>
         <div class="col-xs-10">
             <p>
-                <strong>{{ book.title }}</strong> <span class="gray">({{ book.year }})</span><br>
-                Author('s): {{ book.author }}<br>
-                Language: {{ book.language }}
+                <strong>{{ book.title }}</strong> <span class="gray">({{ book.year }})</span><br/>
+                Author: {{ book.author }}<br/>
+                Language: {{ book.language }}<br/>
+                {% if book.genre %}
+                {{ book.genre }}
+                {% endif %}
             </p>
             <p>{{ book.desc }}</p>
         </div>
