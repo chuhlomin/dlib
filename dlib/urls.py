@@ -13,6 +13,8 @@ urlpatterns = patterns('',
     url(r'^book/(\d+)$', 'dlib.views.book', name='book'),
     url(r'^booklist$', 'dlib.views.booklist', name='booklist'),
     url(r'^add_book$', 'dlib.views.add_book', name='add_book'),
+    url(r'^takeit/(\d+)$', 'dlib.views.borrow_book', name='borrow_book'),
+    
 
     # url(r'^dlib/', include('dlib.foo.urls')),
 

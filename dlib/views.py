@@ -1,8 +1,18 @@
-from django.http import HttpResponse
+from datetime import date
+
+from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.contrib.auth.forms import AuthenticationForm
 from django.core.context_processors import csrf
-from dlib.models import Book
+from dlib.models import Book, Borrow
+
+def borrow_book(request, book_id):
+    book = Book.objects.get(pk=book_id)
+    user = request.user
+    borrow = Borrow(book=book, borrower=user, term=30, rented_date = date.today())
+    borrow.save()
+    return HttpResponseRedirect('/book/' + str(book_id) )
+    
 
 def landing(request):
     d = {
