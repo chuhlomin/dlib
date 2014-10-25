@@ -21,12 +21,30 @@ Run: python manage.py syncdb
 
 Run: python manage.py runserver
 
-### Install dependencies
+### Install NodeJS
+
+Install nodejs: http://nodejs.org
+On Ubuntu additionaly: sudo ln -s /usr/bin/nodejs /usr/bin/node
+
+### Install required node-packages
 
 Run: npm install
 
+### Install Bower
+
+Run: sudo npm install -g bower
+
+### Install Grunt
+
+Run: sudo npm install -g grunt-cli
+
+### Download JS-dependencies
+
 Run: bower install
-  
+
+### Execute Grunt default task
+
+Run: grunt
 
 ### Open site
 
