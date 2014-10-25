@@ -5,17 +5,21 @@
 {% block content %}
     <div class="row">
         {% for book in books %}
-        <div class="col-xs-3">
-            <a href="/book/{{book.id}}">
-                {% if book.pic %}
-                <img src="/static/images/{{ book.pic }}" width="260" height="350">
-                {% else %}
-                <img src="http://placehold.it/180x235.png">
-                {% endif %}
-            </a>
+        <div class="col-xs-3 book-landing">
+            <div class="book-landing-upper">
+                <a href="/book/{{book.id}}">
+                    {% if book.pic %}
+                    <img src="/static/images/{{ book.pic }}" width="260" height="350">
+                    {% else %}
+                    <img src="http://placehold.it/260x350.png">
+                    {% endif %}
+                </a>
 
-            <p><a href="/book/{{book.id}}">{{book.title}}</a></p>
-            <a href="#fakelink" class="btn btn-block btn-default">Take it</a>
+                <p><a href="/book/{{book.id}}">{{book.title}}</a></p>
+            </div>
+            <div class="book-landing-lower">
+                <a href="#fakelink" class="btn btn-block btn-default">Take it</a>
+            </div>
         </div>
         {% endfor %}
     </div>

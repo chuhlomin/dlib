@@ -77,3 +77,19 @@
     background: #ECF0F1;
     color: #7F8C8D;
 }
+
+div.col-xs-3.book-landing, .book-landing-upper, .book-landing-lower {
+    display: inline-block;
+}
+
+.book-landing-upper {
+    height: 420px;
+    vertical-align: top;
+}
+
+.book-landing-lower {
+    vertical-align: bottom;
+    height: 41px;
+    padding: 0;
+    width: 100%;
+}
