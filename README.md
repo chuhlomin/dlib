@@ -24,6 +24,8 @@ Run: python manage.py runserver
 ### Install dependencies
 
 Run: npm install
+
+Run: bower install
   
 
 ### Open site
