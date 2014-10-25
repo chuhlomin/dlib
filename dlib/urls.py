@@ -12,7 +12,8 @@ urlpatterns = patterns('',
     url(r'^user$', 'dlib.views.user', name='user'),
     url(r'^book/(\d+)$', 'dlib.views.book', name='book'),
     url(r'^booklist$', 'dlib.views.booklist', name='booklist'),
-    
+    url(r'^add_book$', 'dlib.views.add_book', name='add_book'),
+
     # url(r'^dlib/', include('dlib.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

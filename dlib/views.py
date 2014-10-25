@@ -15,10 +15,8 @@ def landing(request):
     d.update(csrf(request))
     return render_to_response('landing.html', d)
 
-
 def user(request):
     return render_to_response('user.html')
-
 
 def book(request, book_id):
     arguments = {
@@ -29,7 +27,6 @@ def book(request, book_id):
     }
     return render_to_response('book.html', arguments)
 
-
 def booklist(request):
     arguments = {
         'user': request.user,
@@ -37,3 +34,10 @@ def booklist(request):
         'isRoot': False
     }
     return render_to_response('booklist.html', arguments)
+
+def add_book(request):
+    arguments = {
+        'user': request.user,
+        'isRoot': False
+    }
+    return render_to_response('add_book.html', arguments)
