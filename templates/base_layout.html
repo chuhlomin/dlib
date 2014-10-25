@@ -40,7 +40,7 @@
             {% else %}
             <span class="">Hello, {{user}}.</span>
             <a class="btn btn-primary" href="/add_book"><span class="fui-plus"></span>Add book</a>
-            <a class="btn btn-default" href="{% url "django.contrib.auth.views.logout" %}?next=/">Logout</a>
+            <a class="btn btn-default" href="{% url "django.contrib.auth.views.logout" %}?next={{next}}">Logout</a>
             {% endif %}
         </div>
     </div>
