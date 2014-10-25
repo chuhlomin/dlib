@@ -25,10 +25,10 @@ def user(request):
     return render_to_response('user.html')
 
 
-def book(request):
+def book(request, book_id):
     arguments = {
         'user': request.user,
-        'books': Book.objects.all(),
+        'book': Book.objects.get(pk=book_id),
         'next': request.path
     }
     return render_to_response('book.html', arguments)
