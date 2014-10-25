@@ -46,7 +46,7 @@ def booklist(request):
     }
     return render_to_response('booklist.html', arguments)
 
-def add_book(request):
+def book_add(request):
 
     arguments = {
         'user': request.user,
