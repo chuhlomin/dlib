@@ -1,3 +1,32 @@
 .book-row + .book-row {
     margin-top: 1em;
 }
+
+.headline {
+    position: relative;
+}
+
+.headline .logo {
+    color: #7f8c8d;
+}
+
+.headline .logo .red {
+    color: #c0392b;
+}
+
+.headline .logo a {
+    color: #7f8c8d;
+    text-decoration: underline;
+}
+
+.panel-user {
+    position: absolute;
+    right: 0;
+    top: 1em;
+}
+
+    .panel-user span {
+        font-size: 15px;
+        line-height: 1.4;
+        padding-right: 15px;
+    }
