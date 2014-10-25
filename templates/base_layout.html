@@ -29,7 +29,7 @@
 
 <div class="pull-right ">
     {% if user.is_anonymous %}
-        <a href="{% url "django.contrib.auth.views.login" %}?next={{request.path}}">Login</a>
+        <a href="{% url "django.contrib.auth.views.login" %}?next={{next}}">Login</a> or <a href="/register">Register</a>
     {% else %}
         Hello, {{user}}.
         <a href="{% url "django.contrib.auth.views.logout" %}?next=/">Logout</a>?

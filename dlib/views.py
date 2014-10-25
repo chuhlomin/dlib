@@ -14,7 +14,8 @@ def landing(request):
     d = {
         'images': images,
         'user': request.user,
-        'form': AuthenticationForm()
+        'form': AuthenticationForm(),
+        'next': request.path
     }
     d.update(csrf(request))
     return render_to_response('landing.html', d)
@@ -27,7 +28,8 @@ def user(request):
 def book(request):
     arguments = {
         'user': request.user,
-        'books': Book.objects.all()
+        'books': Book.objects.all(),
+        'next': request.path
     }
     return render_to_response('book.html', arguments)
 
