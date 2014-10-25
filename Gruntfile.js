@@ -15,6 +15,12 @@ module.exports = function(grunt) {
                     {
                         src: 'source/css/application.css',
                         dest: 'static/css/application.css'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'bower_components/flat-ui/fonts/',
+                        src: ['**'],
+                        dest: 'static/fonts/'
                     }
                 ]
             }

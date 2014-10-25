@@ -20,22 +20,27 @@
 <div class="container">
     <div class="headline">
         <h1 class="logo">
-            <div class="logo"></div>
-            ReadHub
+            {% if isRoot %}
+                read<span class="red">hub</span>
+            {% else %}
+                <a href="/">read<span class="red">hub</span></a>
+            {% endif %}
             <small>share your books</small>
         </h1>
+
+        <div class="panel-user">
+            {% if user.is_anonymous %}
+            <a class="btn btn-primary" href="{% url "django.contrib.auth.views.login" %}?next={{next}}">
+                <span class="fui-exit"></span>Login
+            </a>
+            {% else %}
+            <span class="">Hello, {{user}}.</span>
+            <a class="btn btn-primary" href="/add_book"><span class="fui-plus"></span>Add book</a>
+            <a class="btn btn-default" href="{% url "django.contrib.auth.views.logout" %}?next=/">Logout</a>
+            {% endif %}
+        </div>
     </div>
     <!-- /headline -->
-
-<div class="pull-right ">
-    {% if user.is_anonymous %}
-        <a href="{% url "django.contrib.auth.views.login" %}?next={{next}}">Login</a> or <a href="/register">Register</a>
-    {% else %}
-        Hello, {{user}}.
-        <a href="{% url "django.contrib.auth.views.logout" %}?next=/">Logout</a>?
-    {% endif %}
-</div>
-
 
     <h3 class="section-title">{% block title %}{% endblock %}</h3>
 
