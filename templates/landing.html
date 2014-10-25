@@ -7,7 +7,7 @@
         {% for book in books %}
         <div class="col-xs-3 book-landing">
             <div class="book-landing-upper">
-                <a href="/book/{{book.id}}">
+                <a href="/book/{{book.id}}" class="book">
                     {% if book.pic %}
                     <img src="/static/images/{{ book.pic }}" width="260" height="350">
                     {% else %}
