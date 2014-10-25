@@ -1,5 +1,5 @@
 # Django settings for dlib project.
-
+import os
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -69,9 +69,7 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    # Put strings here, like "/home/html/static" or "C:/www/django/static".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'static/'),
 )
 
 # List of finder classes that know how to find static files in
@@ -108,10 +106,8 @@ ROOT_URLCONF = 'dlib.urls'
 WSGI_APPLICATION = 'dlib.wsgi.application'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-)
+    os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'templates'),
+    )
 
 INSTALLED_APPS = (
     'django.contrib.auth',

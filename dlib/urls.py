@@ -6,7 +6,11 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-     #url(r'^$', 'dlib.views.home', name='home'),
+    url(r'^$', 'dlib.views.landing', name='landing'),
+    url(r'^user$', 'dlib.views.user', name='user'),
+    url(r'^book$', 'dlib.views.book', name='book'),
+    url(r'^booklist$', 'dlib.views.booklist', name='booklist'),
+    
     # url(r'^dlib/', include('dlib.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
