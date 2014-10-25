@@ -8,6 +8,10 @@
         <form class="form-horizontal form-login form-monolite" role="form" action="" method="post">
             {% csrf_token %}
 
+            {% if form.non_field_errors %}
+            <div class="alert alert-warning">{{ form.non_field_errors }}</div>
+            {% endif %}
+
             {% for field in form %}
 
             <div class="form-group">

@@ -18,7 +18,7 @@
                 <p><a href="/book/{{book.id}}">{{book.title}}</a></p>
             </div>
             <div class="book-landing-lower">
-                <a href="#fakelink" class="btn btn-block btn-default">Take it</a>
+                <a href="{% if user.is_anonymous %}/register/{%else%}/book/{{book.id}}{%endif%}" class="btn btn-block btn-primary {% if book.borrowed_by %}disabled {% endif %}">Take it</a>
             </div>
         </div>
         {% endfor %}

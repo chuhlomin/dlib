@@ -31,7 +31,7 @@
 .headline .logo a:after {
     content: " ";
     display: block;
-    border-bottom: 5px solid #7f8c8d;
+    border-bottom: 5px solid #4FC8B0;
     width: 100%;
     position: absolute;
     bottom: 2px;
@@ -130,3 +130,8 @@ div.col-xs-3.book-landing, .book-landing-upper, .book-landing-lower {
             transform:skew(8deg) rotate(3deg);
 }
 
+.alert .errorlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

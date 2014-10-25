@@ -39,7 +39,7 @@
                 </a>
             </div>
             {% else %}
-            <span class="">Hello, {{user}}.</span>
+            <span class="">Hello, <a href="{% url 'user_profile' user.id %}">{{user}}</a>.</span>
             <div class="btn-group">
                 <a class="btn btn-primary" href="{% url 'book_add' %}"><span class="fui-plus"></span> Add book</a>
                 <a class="btn btn-default" href="{% url 'django.contrib.auth.views.logout' %}?next={{next}}"> Logout</a>
