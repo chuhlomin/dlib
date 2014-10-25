@@ -65,11 +65,10 @@ def booklist(request):
     arguments = {
         'user': request.user,
         'books': Book.objects.all(),
+        'next': request.path,
         'isRoot': False
     }
     return render_to_response('booklist.html', arguments)
-
-
 
 def book_add(request):
 
