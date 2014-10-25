@@ -14,9 +14,15 @@ class Book (models.Model):
     owner = models.ForeignKey(User)
     
     
+    def __unicode__(self):
+        return self.title
+    
 class Borrow (models.Model):
     term = models.IntegerField(default = 30)
     book = models.ForeignKey(Book)
     rented_date = models.DateField()
     borrower = models.ForeignKey(User)
+    
+    def __unicode__(self):
+        return self.book.title + ' borrowed by ' + unicode(self.borrower) 
     
