@@ -16,7 +16,9 @@
 {%if books_borrowed%}
 <ul>
 {%for book in books_borrowed%}
-<li>{{book.title}} (must return on {{book.to_be_returned_on}})</li>
+<li>{{book.title}} (must return on {{book.to_be_returned_on}}) {%if user == user_p%}
+<a class="btn btn-primary" href="/book/return/{{book.id}}"><span class="fui-plus"></span>Return to {{book.owner}}</a>
+{%endif%}</li>
 {%endfor%}
 </ul>
 {%else%}
