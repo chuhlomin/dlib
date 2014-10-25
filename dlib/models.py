@@ -9,3 +9,4 @@ class Book (models.Model):
     genre    = models.CharField(max_length=50, blank=True, null=True)
     edition  = models.IntegerField(blank=True, null=True)
     pic      = models.CharField(max_length=50, blank=True, null=True)
+    desc     = models.TextField(blank=True, null=True)

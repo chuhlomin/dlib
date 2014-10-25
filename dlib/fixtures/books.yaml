@@ -9,6 +9,7 @@
     isbn: null
     pic: "hgttg.jpg"
     owner: 1
+    desc: "42"
 
 - model: dlib.book
   pk: 2
@@ -21,6 +22,7 @@
     genre: "scifi"
     pic: "cryptonomicon.jpg"
     owner: 1
+    desc: "The novel follows the exploits of two groups of people in two different time periods, presented in alternating chapters. The first group is World War II-era Allied codebreakers and tactical-deception operatives affiliated with the Government Code and Cypher School at Bletchley Park, and disillusioned Axis military and intelligence figures whom they encounter. The second narrative is set in the late 1990s with descendants of the first narrative's characters employing cryptologic, telecom and computer technology to build an underground data haven in the fictional Sultanate of Kinakuta. Their goal is to facilitate anonymous Internet banking using electronic money and (later) digital gold currency, with a longer range objective to distribute Holocaust Education and Avoidance Pod (HEAP) media for instructing genocide-target populations on defensive warfare."
 
 - model: dlib.book
   pk: 3
@@ -33,6 +35,7 @@
     genre: "psychology"
     pic: "thinking.jpg"
     owner: 1
+    desc: "Наши действия и поступки определены нашими мыслями. Но всегда ли мы контролируем наше мышление? Нобелевский лауреат Даниэль Канеман объясняет, почему мы подчас совершаем нерациональные поступки и как мы принимаем неверные решения. У нас имеется две системы мышления. «Медленное» мышление включается, когда мы решаем задачу или выбираем товар в магазине. Обычно нам кажется, что мы уверенно контролируем эти процессы, но не будем забывать, что позади нашего сознания в фоновом режиме постоянно работает «быстрое» мышление - автоматическое, мгновенное и неосознаваемое…"
  
 - model: dlib.book
   pk: 4
@@ -46,6 +49,7 @@
     edition: 1
     pic: "pragprog.jpg"
     owner: 1
+    desc: "Straight from the programming trenches, The Pragmatic Programmer: From Journeyman to Master cuts through the increasing specialization and technicalities of modern software development to examine the core process—what do you do, as an individual and as a team, if you want to create software that’s easy to work with and good for your users."
 
 - model: dlib.book
   pk: 5
@@ -59,3 +63,4 @@
     edition: 2
     pic: "erlang.jpg"
     owner: 1
+    desc: "A multi-user game, web site, cloud application, or networked database can have thousands of users all interacting at the same time. You need a powerful, industrial-strength tool to handle the really hard problems inherent in parallel, concurrent environments. You need Erlang. In this second edition of the bestselling Programming Erlang, you’ll learn how to write parallel programs that scale effortlessly on multicore systems."
