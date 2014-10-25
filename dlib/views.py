@@ -24,7 +24,12 @@ def user(request, user_id):
     }
     d.update(csrf(request))
     return render_to_response('user.html', d)
-    
+ 
+def return_book(request, book_id):
+    book = Book.objects.get(pk=book_id)
+    borrow = Borrow.objects.get(book=book)
+    borrow.delete()
+    return HttpResponseRedirect('/book/' + str(book_id) )
     
 def borrow_book(request, book_id):
     book = Book.objects.get(pk=book_id)
@@ -63,6 +68,8 @@ def booklist(request):
         'isRoot': False
     }
     return render_to_response('booklist.html', arguments)
+
+
 
 def book_add(request):
 
