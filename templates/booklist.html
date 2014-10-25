@@ -9,9 +9,9 @@
         <div class="col-xs-2">
             <a href="{%url 'book' book.id%}" class="book">
                 {% if book.pic %}
-                <img src="/static/images/{{ book.pic }}" width="180" height="235">
+                <img src="/static/images/{{ book.pic }}" width="165" height="235">
                 {% else %}
-                <img src="http://placehold.it/180x235.png">
+                <img src="http://placehold.it/165x235.png" width="165" height="235">
                 {% endif %}
             </a>
         </div>
