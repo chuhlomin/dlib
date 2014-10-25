@@ -1,1 +1,25 @@
-Костя, help me!
+{% extends "base_layout.html" %}
+
+{% block title %}{{user_p.username}}'s statistics{% endblock %}
+{% block content %}
+<h4>Books owned by {{user_p.username}}</h4>
+{%if books_owned%} 
+<ul>
+{%for book in books_owned%}
+<li>{{book.title}}</li>
+{%endfor%}
+</ul>
+{%else%}
+{{user_p.username}} doesn't own any books
+{%endif%}
+<h4>Books borrowed by {{user_p.username}}</h4>
+{%if books_borrowed%}
+<ul>
+{%for book in books_borrowed%}
+<li>{{book.title}} (must return on {{book.to_be_returned_on}})</li>
+{%endfor%}
+</ul>
+{%else%}
+{{user_p.username}} haven't borrowed any books
+{%endif%}
+{%endblock%}

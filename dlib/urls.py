@@ -14,6 +14,7 @@ urlpatterns = patterns('',
     url(r'^booklist$', 'dlib.views.booklist', name='booklist'),
     url(r'^add_book$', 'dlib.views.add_book', name='add_book'),
     url(r'^takeit/(\d+)$', 'dlib.views.borrow_book', name='borrow_book'),
+    url(r'^user/(\d+)$', 'dlib.views.user', name='user_profile'),
     
 
     # url(r'^dlib/', include('dlib.foo.urls')),
