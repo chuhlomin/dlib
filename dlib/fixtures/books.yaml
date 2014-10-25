@@ -1,0 +1,55 @@
+---
+- model: dlib.book
+  pk: 1
+  fields:
+    title: "The Hitchhiker's Guide to the Galaxy"
+    author: "Douglas Adams"
+    year: 1995
+    language: "en"
+#    pic: "hgttg.jpg"
+
+- model: dlib.book
+  pk: 2
+  fields:
+    title: "Cryptonomicon"
+    author: "Neal Stephenson"
+    year: 2000
+    language: "en"
+#    isbn: "0-380-78862-4"
+#    genre: "scifi"
+#    pic: "cryptonomicon.jpg"
+#
+- model: dlib.book
+  pk: 3
+  fields:
+    title: "Думай медленно... Решай быстро"
+    author: "Дэниел Канеман"
+    year: 2014
+    language: "ru"
+#    isbn: "978-5-17-080053-7"
+#    genre: "psychology"
+#    pic: "thinking.jpg"
+# 
+- model: dlib.book
+  pk: 4
+  fields:
+    title: "The Pragmatic Programmer: From Journeyman to Master"
+    author: "Andrew Hunt, David Thomas"
+    year: 1999
+    language: "en"
+#    isbn: "0-201-61622-X"
+#    genre: "programming"
+#    edition: 1
+#    pic: "pragprog.jpg"
+#
+- model: dlib.book
+  pk: 5
+  fields:
+    title: "Programming Erlang"
+    author: "Joe Armstrong"
+    year: 2013
+    language: "en"
+#    isbn: "978-1-93778-553-6"
+#    genre: "programming"
+#    edition: 2
+#    pic: "erlang.jpg"
