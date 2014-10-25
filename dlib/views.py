@@ -11,7 +11,11 @@ def landing(request):
         'hgttg.jpg',
         'thinking.jpg'
     ]
-    d = {'images': images, 'user': request.user, 'form': AuthenticationForm()}
+    d = {
+        'images': images,
+        'user': request.user,
+        'form': AuthenticationForm()
+    }
     d.update(csrf(request))
     return render_to_response('landing.html', d)
 
@@ -21,9 +25,16 @@ def user(request):
 
 
 def book(request):
-    return render_to_response('book.html')
+    arguments = {
+        'user': request.user,
+        'books': Book.objects.all()
+    }
+    return render_to_response('book.html', arguments)
 
 
 def booklist(request):
-    books = Book.objects.all()
-    return render_to_response('booklist.html', {'books': books})
+    arguments = {
+        'user': request.user,
+        'books': Book.objects.all()
+    }
+    return render_to_response('booklist.html', arguments)
