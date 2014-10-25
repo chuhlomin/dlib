@@ -6,7 +6,7 @@ from dlib.models import Book
 
 def landing(request):
     d = {
-        'books': Book.objects.all(),
+        'books': Book.objects.order_by('-id')[:4],
         'user': request.user,
         'form': AuthenticationForm(),
         'next': request.path,
