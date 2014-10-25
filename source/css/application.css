@@ -135,3 +135,7 @@ div.col-xs-3.book-landing, .book-landing-upper, .book-landing-lower {
     padding: 0;
     margin: 0;
 }
+
+h1 small {
+    color: #bdc3c7;
+}
