@@ -4,13 +4,13 @@
 
 {% block content %}
     <div class="row">
-        {% for image in images %}
+        {% for book in books %}
         <div class="col-xs-3">
-            <a href="/book">
-                <img src="/static/images/{{ image }}" width="260" height="350">
+            <a href="/book/{{book.id}}">
+                <img src="/static/images/{{ book.pic }}" width="260" height="350">
             </a>
 
-            <p><a href="/book">Bla-bla title!</a></p>
+            <p><a href="/book/{{book.id}}">Bla-bla title!</a></p>
             <a href="#fakelink" class="btn btn-block btn-default">Take it</a>
         </div>
         {% endfor %}

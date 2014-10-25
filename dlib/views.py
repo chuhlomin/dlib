@@ -5,14 +5,8 @@ from django.core.context_processors import csrf
 from dlib.models import Book
 
 def landing(request):
-    images = [
-        'cryptonomicon.jpg',
-        'erlang.jpg',
-        'hgttg.jpg',
-        'thinking.jpg'
-    ]
     d = {
-        'images': images,
+        'books': Book.objects.all(),
         'user': request.user,
         'form': AuthenticationForm(),
         'next': request.path,
