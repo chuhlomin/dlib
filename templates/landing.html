@@ -7,10 +7,14 @@
         {% for book in books %}
         <div class="col-xs-3">
             <a href="/book/{{book.id}}">
+                {% if {{ book.pic }} %}
                 <img src="/static/images/{{ book.pic }}" width="260" height="350">
+                {% else %}
+                <img src="/static/images/{{ book.pic }}">
+                {% endif %}
             </a>
 
-            <p><a href="/book/{{book.id}}">Bla-bla title!</a></p>
+            <p><a href="/book/{{book.id}}">{{book.title}}</a></p>
             <a href="#fakelink" class="btn btn-block btn-default">Take it</a>
         </div>
         {% endfor %}
