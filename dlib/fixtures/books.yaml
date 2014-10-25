@@ -8,6 +8,7 @@
     language: "en"
     isbn: null
     pic: "hgttg.jpg"
+    owner: 1
 
 - model: dlib.book
   pk: 2
@@ -19,6 +20,7 @@
     isbn: "0-380-78862-4"
     genre: "scifi"
     pic: "cryptonomicon.jpg"
+    owner: 1
 
 - model: dlib.book
   pk: 3
@@ -30,6 +32,7 @@
     isbn: "978-5-17-080053-7"
     genre: "psychology"
     pic: "thinking.jpg"
+    owner: 1
  
 - model: dlib.book
   pk: 4
@@ -42,6 +45,7 @@
     genre: "programming"
     edition: 1
     pic: "pragprog.jpg"
+    owner: 1
 
 - model: dlib.book
   pk: 5
@@ -54,3 +58,4 @@
     genre: "programming"
     edition: 2
     pic: "erlang.jpg"
+    owner: 1
