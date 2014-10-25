@@ -5,16 +5,16 @@
 {% block content %}
     <div class="row">
         <div class="col-xs-3">
-            <span class="fui-user"></span>{{book.owner}}
+            <span class="fui-user"></span><a href="/user/{{book.owner.id}}">{{book.owner}}</a>
             <img src="/static/images/{{book.pic}}" width="260" height="350">
         </div>
         <div class="col-xs-9">
-            <p>{{book.genre}}</p>
+            <p>Genre: {{book.genre}}</p>
             <p>{{book.desc}}</p>
             <p><a href="/takeit/{{book.id}}" class="btn {% if book.borrowed_by %}disabled{% else %}btn-primary{% endif %}">Take it</a></p>
             {%if book.borrowed_by%}
             <div class="alert alert-borrower" role="alert">
-                This book was borrowed by <span class="fui-user"></span>{{book.borrowed_by}} on {{book.borrowed_on}}.<br>
+                Too bad for you! This book was borrowed by <span class="fui-user"></span><a href="/user/{{book.borrowed_by.id}}">{{book.borrowed_by}}</a> on {{book.borrowed_on}}.<br>
                 Estimated date of return is {{book.to_be_returned_on}}
             </div>
             {%endif%}
