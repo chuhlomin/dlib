@@ -14,7 +14,7 @@
             <p><a href="/takeit/{{book.id}}" class="btn {% if book.borrowed_by %}disabled{% else %}btn-primary{% endif %}">Take it</a></p>
             {%if book.borrowed_by%}
             <div class="alert alert-borrower" role="alert">
-                Too bad for you! This book was borrowed by <span class="fui-user"></span>{{book.borrowed_by}} on {{book.borrowed_on}}.<br>
+                This book was borrowed by <span class="fui-user"></span>{{book.borrowed_by}} on {{book.borrowed_on}}.<br>
                 Estimated date of return is {{book.to_be_returned_on}}
             </div>
             {%endif%}

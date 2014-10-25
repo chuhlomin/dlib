@@ -47,7 +47,7 @@
         border-left: 3px solid #16A085;
     }
 
-    .panel-user span {
+    .panel-user > span {
         font-size: 15px;
         line-height: 1.4;
         padding-left: 15px;

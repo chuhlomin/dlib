@@ -32,7 +32,7 @@
             {% if user.is_anonymous %}
             <div class="btn-group">
                 <a class="btn btn-primary" href="{% url 'django.contrib.auth.views.login' %}?next={{next}}">
-                    <span class="fui-exit"></span>Login
+                    <span class="fui-exit"></span> Login
                 </a>
                 <a class="btn btn-primary" href="/register/?next={{next}}">
                     Register
@@ -40,8 +40,10 @@
             </div>
             {% else %}
             <span class="">Hello, {{user}}.</span>
-            <a class="btn btn-primary" href="{% url 'book_add' %}"><span class="fui-plus"></span>Add book</a>
-            <a class="btn btn-default" href="{% url 'django.contrib.auth.views.logout' %}?next={{next}}">Logout</a>
+            <div class="btn-group">
+                <a class="btn btn-primary" href="{% url 'book_add' %}"><span class="fui-plus"></span> Add book</a>
+                <a class="btn btn-default" href="{% url 'django.contrib.auth.views.logout' %}?next={{next}}"> Logout</a>
+            </div>
             {% endif %}
         </div>
     </div>
